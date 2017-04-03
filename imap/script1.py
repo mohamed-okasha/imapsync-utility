@@ -16,7 +16,7 @@ if os.path.exists("email_list")==False:
 
 list_email=open("email_list","r").readlines()
 
-password=str(input("Please enter password email:"))
+password=str(input("Please enter email password :"))
 source=str(input("Please enter source host ip :"))
 distination=str(input("Please enter distination host ip :"))
 
