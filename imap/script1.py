@@ -20,7 +20,11 @@ password=str(raw_input("Please enter email password :"))
 source=str(raw_input("Please enter source host ip :"))
 distination=str(raw_input("Please enter distination host ip :"))
 
-command="/usr/bin/imapsync --nosyncacls --subscribe_all --syncinternaldates --noauthmd5 --host1 source --user1 email --password1 p@ssw0rd --host2 distination--user2 email --password2 p@ssw0rd --sep2 . --prefix2 '' "
+# sync  linux <--> windows
+command1="/usr/bin/imapsync --nosyncacls --subscribe_all --syncinternaldates --noauthmd5 --host1 source --user1 email --password1 p@ssw0rd --host2 distination--user2 email --password2 p@ssw0rd --sep2 . --prefix2 '' "
+
+# sync  linux <--> linux
+command="/usr/bin/imapsync --nosyncacls --subscribe --syncinternaldates --ssl1 --host1 source --user1 email --password1 p@ssw0rd  --noauthmd5 --host2 distination --ssl2 --user2 email --password2 p@ssw0rd  --noauthmd5"
 
 command=command.replace("p@ssw0rd",password)
 command=command.replace("source",source)
