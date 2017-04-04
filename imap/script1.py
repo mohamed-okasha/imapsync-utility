@@ -16,9 +16,9 @@ if os.path.exists("email_list")==False:
 
 list_email=open("email_list","r").readlines()
 
-password=str(input("Please enter email password :"))
-source=str(input("Please enter source host ip :"))
-distination=str(input("Please enter distination host ip :"))
+password=str(raw_input("Please enter email password :"))
+source=str(raw_input("Please enter source host ip :"))
+distination=str(raw_input("Please enter distination host ip :"))
 
 command="/usr/bin/imapsync --nosyncacls --subscribe_all --syncinternaldates --noauthmd5 --host1 source --user1 email --password1 p@ssw0rd --host2 distination--user2 email --password2 p@ssw0rd --sep2 . --prefix2 '' "
 
