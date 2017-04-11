@@ -1,2 +1,2 @@
 # util
-utilities automate some repeated tasks 
+utilities automate some repeated tasks! 
